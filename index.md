@@ -1,6 +1,6 @@
 # About
 
-Add some information about your project here.
+KC868 A8
 
 # Installation
 
