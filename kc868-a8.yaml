@@ -1,0 +1,176 @@
+esphome:
+  name: KC868-A8
+  platform: ESP32
+  board: esp32dev
+
+web_server:
+  port: 80
+
+dashboard_import:
+  package_import_url: github://hzkincony/kc868-a8/kc868-a8.yaml@main
+
+# Example configuration entry for ESP32
+i2c:
+  sda: 4
+  scl: 5
+  scan: true
+  id: bus_a
+
+# Example configuration entry
+ethernet:
+  type: LAN8720
+  mdc_pin: GPIO23
+  mdio_pin: GPIO18
+  clk_mode: GPIO17_OUT
+  phy_addr: 0
+
+  # Optional manual IP
+  manual_ip:
+    static_ip: 192.168.1.199
+    gateway: 192.168.1.1
+    subnet: 255.255.255.0
+
+# Example configuration entry
+pcf8574:
+  - id: "pcf8574_hub_out_1" # for output channel 1-8
+    address: 0x24
+
+  - id: "pcf8574_hub_in_1" # for input channel 9-16
+    address: 0x22
+
+# Individual outputs
+switch:
+  - platform: gpio
+    name: "light1"
+    pin:
+      pcf8574: pcf8574_hub_out_1
+      number: 0
+      mode: OUTPUT
+      inverted: true
+
+  - platform: gpio
+    name: "light2"
+    pin:
+      pcf8574: pcf8574_hub_out_1
+      number: 1
+      mode: OUTPUT
+      inverted: true
+
+  - platform: gpio
+    name: "light3"
+    pin:
+      pcf8574: pcf8574_hub_out_1
+      number: 2
+      mode: OUTPUT
+      inverted: true
+
+  - platform: gpio
+    name: "light4"
+    pin:
+      pcf8574: pcf8574_hub_out_1
+      number: 3
+      mode: OUTPUT
+      inverted: true
+
+  - platform: gpio
+    name: "light5"
+    pin:
+      pcf8574: pcf8574_hub_out_1
+      number: 4
+      mode: OUTPUT
+      inverted: true
+
+  - platform: gpio
+    name: "light6"
+    pin:
+      pcf8574: pcf8574_hub_out_1
+      number: 5
+      mode: OUTPUT
+      inverted: true
+
+  - platform: gpio
+    name: "light7"
+    pin:
+      pcf8574: pcf8574_hub_out_1
+      number: 6
+      mode: OUTPUT
+      inverted: true
+
+  - platform: gpio
+    name: "light8"
+    pin:
+      pcf8574: pcf8574_hub_out_1
+      number: 7
+      mode: OUTPUT
+      inverted: true
+
+binary_sensor:
+  - platform: gpio
+    name: "input1"
+    pin:
+      pcf8574: pcf8574_hub_in_1
+      number: 0
+      mode: INPUT
+      inverted: true
+
+  - platform: gpio
+    name: "input2"
+    pin:
+      pcf8574: pcf8574_hub_in_1
+      number: 1
+      mode: INPUT
+      inverted: true
+
+  - platform: gpio
+    name: "input3"
+    pin:
+      pcf8574: pcf8574_hub_in_1
+      number: 2
+      mode: INPUT
+      inverted: true
+
+  - platform: gpio
+    name: "input4"
+    pin:
+      pcf8574: pcf8574_hub_in_1
+      number: 3
+      mode: INPUT
+      inverted: true
+
+  - platform: gpio
+    name: "input5"
+    pin:
+      pcf8574: pcf8574_hub_in_1
+      number: 4
+      mode: INPUT
+      inverted: true
+
+  - platform: gpio
+    name: "input6"
+    pin:
+      pcf8574: pcf8574_hub_in_1
+      number: 5
+      mode: INPUT
+      inverted: true
+
+  - platform: gpio
+    name: "input7"
+    pin:
+      pcf8574: pcf8574_hub_in_1
+      number: 6
+      mode: INPUT
+      inverted: true
+
+  - platform: gpio
+    name: "input8"
+    pin:
+      pcf8574: pcf8574_hub_in_1
+      number: 7
+      mode: INPUT
+      inverted: true
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
