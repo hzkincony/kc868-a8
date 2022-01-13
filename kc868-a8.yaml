@@ -9,6 +9,9 @@ web_server:
 dashboard_import:
   package_import_url: github://hzkincony/kc868-a8/kc868-a8.yaml@main
 
+ota:
+  password: ""
+
 # Example configuration entry for ESP32
 i2c:
   sda: 4
