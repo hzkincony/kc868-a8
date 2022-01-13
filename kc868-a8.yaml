@@ -1,6 +1,15 @@
-esphome:
+substitutions:
   name: kc868-a8
-  platform: ESP32
+
+esphome:
+  name: ${name}
+  name_add_mac_suffix: true
+  
+  project:
+    name: kincony.kc868-a8
+    version: "1"
+  
+esp32:
   board: esp32dev
 
 web_server:
