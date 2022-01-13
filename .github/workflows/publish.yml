@@ -12,4 +12,4 @@ jobs:
       # CHANGEME: Set the filenames of your config files here:
       files: kc868-a8.yaml
       # CHANGEME: Set the name of your project here:
-      name: Template Project
+      name: KC868-A8
