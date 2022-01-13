@@ -6,6 +6,11 @@ esphome:
 web_server:
   port: 80
 
+api:
+
+ota:
+  password: ""
+
 dashboard_import:
   package_import_url: github://hzkincony/kc868-a8/kc868-a8.yaml@main
 
