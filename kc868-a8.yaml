@@ -6,8 +6,6 @@ esphome:
 web_server:
   port: 80
 
-api:
-
 ota:
   password: ""
 
