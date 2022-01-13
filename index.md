@@ -1,5 +1,5 @@
 # About
-
+KC868-A8 Smart Controller for home automation
 # hardware resource:  
 
 Ethernet/WiFi/Bluetooth  
