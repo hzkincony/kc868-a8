@@ -1,5 +1,6 @@
 # About
-KC868-A8 Smart Controller for home automation
+# KC868-A8 Smart Controller for home automation
+![image](https://www.kincony.com/images/KC868-A8/KC868-A8_ESP32_relay.jpg)  
 # hardware resource:  
 
 Ethernet/WiFi/Bluetooth  
