@@ -1,6 +1,15 @@
 # About
 
-KC868 A8
+# hardware resource:  
+
+Ethernet/WiFi/Bluetooth  
+8 channel relay output  
+8 channel digital input  
+433MHz RF transmit  
+433MHz RF receiver  
+2 channel analog input (DC 0-5V)  
+4 channel GPIO (pull-up resistor)  
+IIC extend port  
 
 # Installation
 
