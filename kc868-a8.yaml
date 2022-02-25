@@ -36,12 +36,6 @@ ethernet:
   clk_mode: GPIO17_OUT
   phy_addr: 0
 
-  # Optional manual IP
-  manual_ip:
-    static_ip: 192.168.1.199
-    gateway: 192.168.1.1
-    subnet: 255.255.255.0
-
 # Example configuration entry
 pcf8574:
   - id: "pcf8574_hub_out_1" # for output channel 1-8
